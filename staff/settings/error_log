@@ -1,0 +1,23 @@
+[27-Jul-2025 14:01:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::updateSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 39
+[27-Jul-2025 14:02:07 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to GajiSettings::updateGajiSettings() must be of the type array, float given, called in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 39 and defined in /home/u7653190/public_html/absensi.codene.my.id/classes/GajiSettings.php:30
+Stack trace:
+#0 /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php(39): GajiSettings->updateGajiSettings(10000)
+#1 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/classes/GajiSettings.php on line 30
+[27-Jul-2025 14:03:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::getGajiSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 28
+[27-Jul-2025 14:03:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::getGajiSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 28
+[27-Jul-2025 14:45:17 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:17 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:45 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header_admin.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:45 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header_admin.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:46:22 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/footer.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 104
+[27-Jul-2025 14:46:22 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/footer.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 104
