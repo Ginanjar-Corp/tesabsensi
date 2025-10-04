@@ -124,6 +124,11 @@ if (!empty($school_logo_path)) {
                                 <i class="fas fa-user-clock mr-3"></i> Kehadiran Harian Saya
                             </a>
                         </li>
+                        <li class="mb-4">
+                            <a href="<?php echo ROOT_URL; ?>guru/gaji_guru.php" class="flex items-center sidebar-menu-item <?php echo (basename($_SERVER['PHP_SELF']) == 'laporan_absensi_guru.php') ? 'active' : ''; ?>">
+                                <i class="fas fa-user-clock mr-3"></i> Kehadiran Harian Saya
+                            </a>
+                        </li>
                         <!--<li class="mb-4">
                             <a href="<?php echo ROOT_URL; ?>guru/rekap_gaji_guru.php" class="flex items-center sidebar-menu-item <?php echo (basename($_SERVER['PHP_SELF']) == 'rekap_gaji_guru.php') ? 'active' : ''; ?>">
                                 <i class="fa fa-money-bill-wave mr-3"></i> Rekap Bisyaroh
@@ -171,3 +176,4 @@ if (!empty($school_logo_path)) {
             <button id="guru-hamburger-button" class="md:hidden fixed top-4 left-4 z-40 p-2 bg-blue-600 text-white rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <i class="fas fa-bars text-xl"></i>
             </button>
+
