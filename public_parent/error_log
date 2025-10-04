@@ -1,0 +1,438 @@
+[29-Aug-2025 11:43:00 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 11:50:16 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 11:50:46 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:05:39 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:05:45 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:09:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method HafalanSiswa::getAllParent() in /home/u7653190/public_html/pondok.codene.my.id/public_parent/hafalan.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/public_parent/hafalan.php on line 53
+[29-Aug-2025 13:16:26 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:16:47 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:16:52 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:17:35 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:17:52 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:17:59 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:19:03 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:19:47 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 13:19:47 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 13:19:47 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:22:48 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 13:22:48 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 13:22:48 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:24:33 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 13:24:33 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 13:24:33 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 13:37:05 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 13:37:05 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 13:37:05 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 16:54:43 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 16:54:43 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 16:54:43 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 16:54:49 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 16:54:49 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [status_izin] => Disetujui
+)
+
+[29-Aug-2025 16:54:49 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:32:24 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:32:24 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:32:24 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:32:31 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:32:31 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [status_izin] => Menunggu
+)
+
+[29-Aug-2025 18:32:31 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:34:34 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:34:34 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [status_izin] => Menunggu
+)
+
+[29-Aug-2025 18:34:34 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:34:51 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:34:51 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:34:51 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:35:59 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:35:59 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:35:59 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:36:40 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:36:40 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:36:40 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:41:25 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:41:25 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:41:25 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:41:57 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:41:57 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:41:57 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:44:22 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:44:22 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:44:22 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:44:58 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:44:58 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:44:58 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.role' in 'ON'
+[29-Aug-2025 18:49:30 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:49:30 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:49:30 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'g_pemberi.role' in 'ON'
+[29-Aug-2025 18:51:01 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:51:01 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:51:01 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'g_pemberi.role' in 'ON'
+[29-Aug-2025 18:51:59 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:51:59 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:51:59 Asia/Jakarta] Parent Izin Page Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'g_pemberi.nama_lengkap' in 'SELECT'
+[29-Aug-2025 18:54:32 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:54:32 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:54:32 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 18:55:57 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:55:57 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:55:57 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 18:56:04 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:56:04 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [kelas_id] => 12
+)
+
+[29-Aug-2025 18:56:04 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+)
+
+[29-Aug-2025 18:56:12 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:56:12 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [kelas_id] => 11
+)
+
+[29-Aug-2025 18:56:12 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 18:56:30 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:56:30 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:56:30 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 18:57:17 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 18:57:17 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 18:57:17 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 19:02:38 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:02:38 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:02:38 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 19:02:41 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:02:41 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:02:41 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [tahun_ajaran_id] => 7
+            [siswa_id] => 13
+            [tanggal_izin] => 2025-08-29
+            [waktu_keluar] => 18:31:00
+            [waktu_kembali] => 00:00:00
+            [keperluan] => t
+            [diberi_izin_oleh_id] => 15
+            [status_izin] => Disetujui
+            [catatan_admin] => 
+            [created_at] => 2025-08-29 18:31:42
+            [updated_at] => 2025-08-29 18:36:33
+            [nama_siswa] => Siswa 003
+            [nisn] => 234567900
+            [nama_kelas] => 1 Tsanawiyah A
+            [nama_pemberi_izin] => guru005t
+            [nama_tahun_ajaran] => 2025/2026
+        )
+
+)
+
+[29-Aug-2025 19:02:43 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:02:43 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [status_izin] => Menunggu
+)
+
+[29-Aug-2025 19:02:43 Asia/Jakarta] DEBUG: Izin Data Result: Array
+(
+)
+
+[29-Aug-2025 19:03:21 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:03:21 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+    [status_izin] => Menunggu
+)
+
+[29-Aug-2025 19:15:51 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:15:51 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:17:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method Kelas::getById() in /home/u7653190/public_html/pondok.codene.my.id/public_parent/dashboard.php:64
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/public_parent/dashboard.php on line 64
+[29-Aug-2025 19:20:50 Asia/Jakarta] PHP Notice:  Undefined property: Kelas::$conn in /home/u7653190/public_html/pondok.codene.my.id/classes/Kelas.php on line 41
+[29-Aug-2025 19:20:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/u7653190/public_html/pondok.codene.my.id/classes/Kelas.php:41
+Stack trace:
+#0 /home/u7653190/public_html/pondok.codene.my.id/public_parent/dashboard.php(64): Kelas->getById(11)
+#1 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/classes/Kelas.php on line 41
+[29-Aug-2025 19:21:43 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:21:43 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:21:48 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:21:48 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:21:49 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:21:49 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:22:22 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:22:22 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:25:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function set_parent_flash() in /home/u7653190/public_html/pondok.codene.my.id/public_parent/change_password.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/public_parent/change_password.php on line 49
+[29-Aug-2025 19:41:11 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:41:11 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:44:18 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:44:18 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:45:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function set_parent_flash() in /home/u7653190/public_html/pondok.codene.my.id/public_parent/data_diri.php:138
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/public_parent/data_diri.php on line 138
+[29-Aug-2025 19:47:27 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:47:27 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[29-Aug-2025 19:47:47 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[29-Aug-2025 19:47:47 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
+[30-Aug-2025 17:46:40 Asia/Jakarta] DEBUG: Siswa ID for Izin: 13
+[30-Aug-2025 17:46:40 Asia/Jakarta] DEBUG: Filters for Izin: Array
+(
+)
+
