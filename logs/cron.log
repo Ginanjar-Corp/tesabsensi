@@ -1,0 +1,112 @@
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Array to string conversion in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 238
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Notice: Undefined variable: school_name in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 244
+
+Fatal error: Cannot redeclare flash() (previously declared in /home/u7653190/public_html/pondok.codene.my.id/includes/helpers.php:27) in /home/u7653190/public_html/pondok.codene.my.id/includes/helpers.php on line 62
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: base_api_url in /home/u7653190/public_html/pondok.codene.my.id/includes/whatsapp_notifier.php on line 288
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Notice: Undefined variable: announcements_to_update in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+
+Warning: Invalid argument supplied for foreach() in /home/u7653190/public_html/pondok.codene.my.id/scripts/process_whatsapp_queue.php on line 64
+Terjadi masalah pada koneksi database. Silakan coba lagi nanti.Terjadi masalah pada koneksi database. Silakan coba lagi nanti.Terjadi masalah pada koneksi database. Silakan coba lagi nanti.
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): MySQL server has gone away in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48
+
+Warning: PDOStatement::execute(): Error reading result set's header in /home/u7653190/public_html/absensi.codene.my.id/classes/NotificationQueue.php on line 48

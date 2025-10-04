@@ -1,0 +1,12 @@
+/* Dalam style.css */
+@media (max-width: 767px) {
+    /* Menyembunyikan menu pada layar yang lebih kecil dari ukuran 'md' */
+    #mobile-menu {
+        display: none;
+    }
+
+    /* Menampilkan tombol hamburger */
+    #hamburger-button {
+        display: block;
+    }
+}

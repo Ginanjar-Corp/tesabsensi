@@ -1,0 +1,1499 @@
+[18-Jul-2025 11:00:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method Siswa::bulkCreateOrUpdate() in /home/u7653190/public_html/absensi.codene.my.id/api/import_data.php:145
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/import_data.php on line 145
+[18-Jul-2025 23:12:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method AbsensiGerbang::getMonthlyStudentGateAttendanceReport() in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 37
+[18-Jul-2025 23:22:07 Asia/Jakarta] PHP Notice:  Undefined property: AbsensiGerbang::$conn in /home/u7653190/public_html/absensi.codene.my.id/classes/AbsensiGerbang.php on line 325
+[18-Jul-2025 23:22:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/u7653190/public_html/absensi.codene.my.id/classes/AbsensiGerbang.php:325
+Stack trace:
+#0 /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_guru_bulanan.php(42): AbsensiGerbang->getMonthlyGuruGateAttendanceReport('07', '2025')
+#1 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/classes/AbsensiGerbang.php on line 325
+[18-Jul-2025 23:22:28 Asia/Jakarta] Export Absensi Gerbang Guru Bulanan Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tanggal_masuk' in 'SELECT'
+[18-Jul-2025 16:43:48 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:03:09 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:03:43 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:03:49 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:04:04 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:05:48 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:11:11 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:12:04 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:18:31 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:18:42 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:18:55 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 02:19:07 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_mapel_siswa_bulanan.php on line 67
+[19-Jul-2025 16:56:01 Asia/Jakarta] Error in getDailyStudentGateAttendanceReport: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u7653190_tesabsensi.absensi_gerbang_siswa' doesn't exist
+[19-Jul-2025 17:05:44 Asia/Jakarta] Error in getDailyStudentGateAttendanceReport: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u7653190_tesabsensi.absensi_gerbang_siswa' doesn't exist
+[19-Jul-2025 17:13:30 Asia/Jakarta] DEBUG AbsensiGerbang: SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,  -- Menggunakan waktu_masuk dari absensi_harian_siswa
+                        ahs.waktu_pulang AS jam_pulang, -- Menggunakan waktu_pulang dari absensi_harian_siswa
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:13:30 Asia/Jakarta] DEBUG AbsensiGerbang: Parameters: Array
+(
+    [:date] => 2025-07-19
+)
+
+[19-Jul-2025 17:14:17 Asia/Jakarta] DEBUG AbsensiGerbang: SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,  -- Menggunakan waktu_masuk dari absensi_harian_siswa
+                        ahs.waktu_pulang AS jam_pulang, -- Menggunakan waktu_pulang dari absensi_harian_siswa
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:14:17 Asia/Jakarta] DEBUG AbsensiGerbang: Parameters: Array
+(
+    [:date] => 2025-07-20
+)
+
+[19-Jul-2025 17:31:47 Asia/Jakarta] DEBUG AbsensiGerbang (Final): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:31:47 Asia/Jakarta] DEBUG AbsensiGerbang (Final): Parameters: Array
+(
+    [:date] => 2025-07-19
+)
+
+[19-Jul-2025 17:32:44 Asia/Jakarta] DEBUG AbsensiGerbang (Final): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:32:44 Asia/Jakarta] DEBUG AbsensiGerbang (Final): Parameters: Array
+(
+    [:date] => 2025-07-18
+)
+
+[19-Jul-2025 17:34:31 Asia/Jakarta] DEBUG AbsensiGerbang (Final): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:34:31 Asia/Jakarta] DEBUG AbsensiGerbang (Final): Parameters: Array
+(
+    [:date] => 2025-07-19
+)
+
+[19-Jul-2025 17:51:11 Asia/Jakarta] DEBUG AbsensiGerbang (Final): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 17:51:11 Asia/Jakarta] DEBUG AbsensiGerbang (Final): Parameters: Array
+(
+    [:date] => 2025-07-19
+)
+
+[19-Jul-2025 18:49:08 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 18:49:08 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-19
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 2
+)
+
+[19-Jul-2025 18:52:46 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 18:52:46 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-19
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 2
+)
+
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 56
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 57
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 58
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 59
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 56
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 57
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 58
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 59
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 56
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 57
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 58
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 59
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 56
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: jam_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 57
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_masuk in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 58
+[19-Jul-2025 18:52:47 Asia/Jakarta] PHP Notice:  Undefined index: status_pulang in /home/u7653190/public_html/absensi.codene.my.id/api/export_absensi_gerbang_siswa_bulanan.php on line 59
+[19-Jul-2025 18:56:36 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 18:56:36 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-19
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+)
+
+[19-Jul-2025 19:10:14 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 19:10:14 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-19
+    [:tahun_ajaran] => 2025/2026
+    [:semester] => Ganjil
+    [:kelas_id] => 3
+)
+
+[19-Jul-2025 19:10:52 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[19-Jul-2025 19:10:52 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-19
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 2
+)
+
+[20-Jul-2025 11:34:06 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[20-Jul-2025 11:34:06 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-20
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+)
+
+[20-Jul-2025 11:35:59 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[20-Jul-2025 11:35:59 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-20
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 4
+)
+
+[20-Jul-2025 11:36:10 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[20-Jul-2025 11:36:10 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-20
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 1
+)
+
+[20-Jul-2025 11:44:00 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[20-Jul-2025 11:44:00 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-20
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 1
+)
+
+[20-Jul-2025 11:44:17 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester AND ahs.kelas_id = :kelas_id ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[20-Jul-2025 11:44:17 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-20
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+    [:kelas_id] => 2
+)
+
+[21-Jul-2025 15:47:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method AbsensiHarian::recordSiswaGateAttendance() in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php on line 83
+[21-Jul-2025 15:47:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method AbsensiHarian::recordSiswaGateAttendance() in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php on line 83
+[21-Jul-2025 15:50:34 Asia/Jakarta] Nomor telepon orang tua tidak ditemukan untuk notifikasi WhatsApp bagi siswa Siswa 1.
+[21-Jul-2025 15:55:16 Asia/Jakarta] WhatsApp API cURL Error: Operation timed out after 10002 milliseconds with 0 bytes received
+[21-Jul-2025 15:55:16 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 1: Gagal terhubung ke layanan WhatsApp: Operation timed out after 10002 milliseconds with 0 bytes received
+[21-Jul-2025 15:56:14 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 15:56:14 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 15:56:16 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:00:54 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (pulang)
+[21-Jul-2025 16:01:22 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:01:22 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:01:24 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: nama_pengguna in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: tipe_absensi_teks in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: waktu_absensi in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:50 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:03:50 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: nama_pengguna in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: tipe_absensi_teks in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:50 Asia/Jakarta] PHP Notice:  Undefined variable: waktu_absensi in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:03:52 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:07:18 Asia/Jakarta] PHP Notice:  Undefined variable: nama_pengguna in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:07:18 Asia/Jakarta] PHP Notice:  Undefined variable: tipe_absensi_teks in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:07:18 Asia/Jakarta] PHP Notice:  Undefined variable: waktu_absensi in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:07:20 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[21-Jul-2025 16:07:20 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 16:07:58 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[21-Jul-2025 16:07:58 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 16:08:53 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:08:53 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:08:55 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:11:53 Asia/Jakarta] PHP Notice:  Undefined variable: nama_pengguna in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:53 Asia/Jakarta] PHP Notice:  Undefined variable: tipe_absensi_teks in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:53 Asia/Jakarta] PHP Notice:  Undefined variable: waktu_absensi in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:54 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:11:54 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:11:54 Asia/Jakarta] PHP Notice:  Undefined variable: nama_pengguna in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:54 Asia/Jakarta] PHP Notice:  Undefined variable: tipe_absensi_teks in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:54 Asia/Jakarta] PHP Notice:  Undefined variable: waktu_absensi in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 52
+[21-Jul-2025 16:11:56 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:17:53 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:17:53 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:17:55 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:21:34 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 16:21:34 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 16:21:36 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 16:22:12 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[21-Jul-2025 16:22:12 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 17:27:13 Asia/Jakarta] WhatsApp API is disabled in settings.
+[21-Jul-2025 17:27:13 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 1: WhatsApp API dinonaktifkan.
+[21-Jul-2025 17:28:05 Asia/Jakarta] WhatsApp API is disabled in settings.
+[21-Jul-2025 17:28:05 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: WhatsApp API dinonaktifkan.
+[21-Jul-2025 17:28:05 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 17:30:51 Asia/Jakarta] WhatsApp API is disabled in settings.
+[21-Jul-2025 17:30:51 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 1: WhatsApp API dinonaktifkan.
+[21-Jul-2025 17:31:53 Asia/Jakarta] WhatsApp API cURL Error: Operation timed out after 10002 milliseconds with 0 bytes received
+[21-Jul-2025 17:31:53 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 1: Gagal terhubung ke layanan WhatsApp: Operation timed out after 10002 milliseconds with 0 bytes received
+[21-Jul-2025 17:39:22 Asia/Jakarta] PHP Notice:  Undefined variable: nama_kelas in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 51
+[21-Jul-2025 17:39:26 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (masuk)
+[21-Jul-2025 17:41:49 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (pulang)
+[21-Jul-2025 17:44:47 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (masuk)
+[21-Jul-2025 17:45:11 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (pulang)
+[21-Jul-2025 17:45:24 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[21-Jul-2025 17:45:24 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 17:45:42 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[21-Jul-2025 17:45:42 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[21-Jul-2025 17:46:38 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 17:46:38 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 17:46:38 Asia/Jakarta] PHP Notice:  Undefined variable: nama_guru in /home/u7653190/public_html/absensi.codene.my.id/includes/whatsapp_notifier.php on line 80
+[21-Jul-2025 17:46:40 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 17:47:23 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 17:47:23 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 17:47:25 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 18:00:51 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[21-Jul-2025 18:00:51 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-21
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+)
+
+[21-Jul-2025 18:27:51 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 18:27:51 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 18:27:53 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 18:28:09 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (masuk)
+[21-Jul-2025 18:28:20 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (pulang)
+[21-Jul-2025 18:28:37 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 18:28:37 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 18:28:39 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 20:02:22 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 20:02:22 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 1: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 20:02:24 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[21-Jul-2025 20:03:47 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 20:03:47 Asia/Jakarta] Failed to send WhatsApp notification to guru Ginanjar Wilujeng: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 20:03:48 Asia/Jakarta] WhatsApp notification sent for guru Ginanjar Wilujeng to Kepala Sekolah.
+[21-Jul-2025 20:34:09 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[21-Jul-2025 20:34:09 Asia/Jakarta] Failed to send WhatsApp notification to guru Ginanjar Wilujeng: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[21-Jul-2025 20:34:10 Asia/Jakarta] WhatsApp notification sent for guru Ginanjar Wilujeng to Kepala Sekolah.
+[22-Jul-2025 07:34:49 Asia/Jakarta] WhatsApp API cURL Error: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 07:34:49 Asia/Jakarta] Failed to send WhatsApp notification to guru Ginanjar Wilujeng: Gagal terhubung ke layanan WhatsApp: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 07:34:58 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[22-Jul-2025 07:34:58 Asia/Jakarta] Failed to send WhatsApp notification for guru Ginanjar Wilujeng to Kepala Sekolah: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[22-Jul-2025 08:53:13 Asia/Jakarta] WhatsApp API cURL Error: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 08:53:14 Asia/Jakarta] Failed to send WhatsApp notification for siswa Budi Harson777777: Gagal terhubung ke layanan WhatsApp: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 08:57:33 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Invali api_key or sender,please check again (2)"}
+[22-Jul-2025 08:57:33 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 2: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[22-Jul-2025 08:57:51 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Invali api_key or sender,please check again (2)"}
+[22-Jul-2025 08:57:51 Asia/Jakarta] Failed to send WhatsApp notification for siswa Budi Harson777777: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[22-Jul-2025 08:58:32 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[22-Jul-2025 08:58:32 Asia/Jakarta] Failed to send WhatsApp notification for siswa Siswa 3: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[22-Jul-2025 09:00:28 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (masuk)
+[22-Jul-2025 09:01:02 Asia/Jakarta] WhatsApp notification sent for siswa Siswa 1 (pulang)
+[22-Jul-2025 09:01:43 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[22-Jul-2025 09:01:44 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[22-Jul-2025 09:02:10 Asia/Jakarta] WhatsApp notification sent to guru Guru 1.
+[22-Jul-2025 09:02:11 Asia/Jakarta] WhatsApp notification sent for guru Guru 1 to Kepala Sekolah.
+[22-Jul-2025 10:28:31 Asia/Jakarta] Nomor telepon guru tidak ditemukan untuk notifikasi WhatsApp bagi guru Guru 3.
+[22-Jul-2025 10:28:38 Asia/Jakarta] WhatsApp notification sent for guru Guru 3 to Kepala Sekolah.
+[22-Jul-2025 10:30:18 Asia/Jakarta] WhatsApp API cURL Error: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 10:30:18 Asia/Jakarta] Failed to send WhatsApp notification to guru Guru 3: Gagal terhubung ke layanan WhatsApp: Operation timed out after 10002 milliseconds with 0 bytes received
+[22-Jul-2025 10:30:18 Asia/Jakarta] WhatsApp API Error Response (HTTP 400):                                           {"status":false,"msg":"Failed to send message!"}
+[22-Jul-2025 10:30:18 Asia/Jakarta] Failed to send WhatsApp notification for guru Guru 3 to Kepala Sekolah: Gagal mengirim notifikasi WhatsApp. Kode HTTP: 400. Pesan: Tidak diketahui
+[22-Jul-2025 12:33:36 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 12:38:30 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 12:54:29 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:02:32 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:06:39 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:33:22 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:33:49 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:47:01 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[22-Jul-2025 13:47:07 Asia/Jakarta] Notifikasi untuk siswa Siswa 2 ditambahkan ke antrean.
+[22-Jul-2025 13:47:13 Asia/Jakarta] Notifikasi untuk siswa Siswa 3 ditambahkan ke antrean.
+[22-Jul-2025 13:47:19 Asia/Jakarta] Notifikasi untuk guru Guru 1 ditambahkan ke antrean.
+[22-Jul-2025 13:47:19 Asia/Jakarta] Notifikasi untuk guru Guru 1 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 13:47:26 Asia/Jakarta] Notifikasi untuk guru Guru 2 ditambahkan ke antrean.
+[22-Jul-2025 13:47:26 Asia/Jakarta] Notifikasi untuk guru Guru 2 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 13:47:35 Asia/Jakarta] Notifikasi untuk guru Guru 3 ditambahkan ke antrean.
+[22-Jul-2025 13:47:35 Asia/Jakarta] Notifikasi untuk guru Guru 3 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 13:47:41 Asia/Jakarta] Notifikasi untuk guru Guru 4 ditambahkan ke antrean.
+[22-Jul-2025 13:47:41 Asia/Jakarta] Notifikasi untuk guru Guru 4 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 13:47:46 Asia/Jakarta] Notifikasi untuk siswa Budi Harson777777 ditambahkan ke antrean.
+[22-Jul-2025 14:11:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method NotificationQueue::addNotificationToQueue() in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php:111
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php on line 111
+[22-Jul-2025 14:13:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method NotificationQueue::addNotificationToQueue() in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php:111
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php on line 111
+[22-Jul-2025 14:15:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method NotificationQueue::addNotificationToQueue() in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php:111
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/api/absensi_gerbang_process.php on line 111
+[22-Jul-2025 14:16:39 Asia/Jakarta] Notifikasi untuk siswa Budi Harson777777 ditambahkan ke antrean.
+[22-Jul-2025 14:33:16 Asia/Jakarta] Notifikasi untuk guru Guru 4 ditambahkan ke antrean.
+[22-Jul-2025 14:33:16 Asia/Jakarta] Notifikasi untuk guru Guru 4 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 14:33:24 Asia/Jakarta] Notifikasi untuk guru Guru 3 ditambahkan ke antrean.
+[22-Jul-2025 14:33:24 Asia/Jakarta] Notifikasi untuk guru Guru 3 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 14:34:49 Asia/Jakarta] Notifikasi untuk guru Guru 1 ditambahkan ke antrean.
+[22-Jul-2025 14:34:49 Asia/Jakarta] Notifikasi untuk guru Guru 1 ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 23:41:47 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[22-Jul-2025 23:41:47 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[22-Jul-2025 23:43:40 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[22-Jul-2025 23:43:40 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[23-Jul-2025 01:45:55 Asia/Jakarta] Notifikasi untuk siswa Budi Harson777777 ditambahkan ke antrean.
+[23-Jul-2025 01:45:59 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[23-Jul-2025 01:45:59 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[23-Jul-2025 01:47:50 Asia/Jakarta] Notifikasi untuk siswa Budi Harson777777 ditambahkan ke antrean.
+[23-Jul-2025 01:47:59 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[23-Jul-2025 01:47:59 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[23-Jul-2025 21:15:07 Asia/Jakarta] Notifikasi untuk guru Guru 4 ditambahkan ke antrean.
+[23-Jul-2025 21:15:07 Asia/Jakarta] Notifikasi untuk guru Guru 4 ke Kepala Sekolah ditambahkan ke antrean.
+[23-Jul-2025 21:15:23 Asia/Jakarta] Notifikasi untuk guru Guru 4 ditambahkan ke antrean.
+[23-Jul-2025 21:15:23 Asia/Jakarta] Notifikasi untuk guru Guru 4 ke Kepala Sekolah ditambahkan ke antrean.
+[23-Jul-2025 22:56:38 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): SQL Query: SELECT
+                        s.nisn,
+                        s.nama_lengkap,
+                        k.nama_kelas,
+                        ahs.waktu_masuk AS jam_masuk,
+                        ahs.waktu_pulang AS jam_pulang,
+                        ahs.status_masuk,
+                        ahs.status_pulang
+                    FROM
+                        siswa s
+                    JOIN
+                        kelas k ON s.kelas_id = k.id
+                    LEFT JOIN
+                        absensi_harian_siswa ahs ON s.id = ahs.siswa_id
+                        AND ahs.tanggal = :date AND ahs.tahun_ajaran = :tahun_ajaran AND ahs.semester = :semester ORDER BY k.nama_kelas, s.nama_lengkap ASC
+[23-Jul-2025 22:56:38 Asia/Jakarta] DEBUG AbsensiGerbang (Final Kelas): Parameters: Array
+(
+    [:date] => 2025-07-23
+    [:tahun_ajaran] => 2024/2025
+    [:semester] => Ganjil
+)
+
+[24-Jul-2025 08:24:27 Asia/Jakarta] Notifikasi untuk siswa Siswa 3 ditambahkan ke antrean.
+[24-Jul-2025 08:24:32 Asia/Jakarta] Notifikasi untuk guru Guru 2 ditambahkan ke antrean.
+[24-Jul-2025 08:24:32 Asia/Jakarta] Notifikasi untuk guru Guru 2 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 08:24:37 Asia/Jakarta] Notifikasi untuk guru Guru 1 ditambahkan ke antrean.
+[24-Jul-2025 08:24:37 Asia/Jakarta] Notifikasi untuk guru Guru 1 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 08:24:43 Asia/Jakarta] Notifikasi untuk siswa Siswa 2 ditambahkan ke antrean.
+[24-Jul-2025 08:24:56 Asia/Jakarta] Notifikasi untuk siswa Siswa 1 ditambahkan ke antrean.
+[24-Jul-2025 08:26:25 Asia/Jakarta] Notifikasi untuk guru Guru 4 ditambahkan ke antrean.
+[24-Jul-2025 08:26:25 Asia/Jakarta] Notifikasi untuk guru Guru 4 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 14:40:25 Asia/Jakarta] Notifikasi untuk guru Guru 10 ditambahkan ke antrean.
+[24-Jul-2025 14:40:25 Asia/Jakarta] Notifikasi untuk guru Guru 10 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 14:40:32 Asia/Jakarta] Notifikasi untuk siswa Siswa 12 ditambahkan ke antrean.
+[24-Jul-2025 17:54:37 Asia/Jakarta] Notifikasi untuk siswa Siswa 12 ditambahkan ke antrean.
+[24-Jul-2025 17:56:35 Asia/Jakarta] Notifikasi untuk guru Guru 6 ditambahkan ke antrean.
+[24-Jul-2025 17:56:35 Asia/Jakarta] Notifikasi untuk guru Guru 6 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 17:56:59 Asia/Jakarta] Notifikasi untuk guru Guru 6 ditambahkan ke antrean.
+[24-Jul-2025 17:56:59 Asia/Jakarta] Notifikasi untuk guru Guru 6 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 17:58:06 Asia/Jakarta] Notifikasi untuk guru Guru 7 ditambahkan ke antrean.
+[24-Jul-2025 17:58:06 Asia/Jakarta] Notifikasi untuk guru Guru 7 ke Kepala Sekolah ditambahkan ke antrean.
+[24-Jul-2025 17:59:16 Asia/Jakarta] Notifikasi untuk guru Guru 7 ditambahkan ke antrean.
+[24-Jul-2025 17:59:16 Asia/Jakarta] Notifikasi untuk guru Guru 7 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 06:22:20 Asia/Jakarta] Notifikasi untuk siswa Siswa 001 ditambahkan ke antrean.
+[25-Jul-2025 06:22:26 Asia/Jakarta] Notifikasi untuk siswa Siswa 002 ditambahkan ke antrean.
+[25-Jul-2025 06:22:41 Asia/Jakarta] Notifikasi untuk guru Guru 001 ditambahkan ke antrean.
+[25-Jul-2025 06:22:41 Asia/Jakarta] Notifikasi untuk guru Guru 001 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 06:24:28 Asia/Jakarta] Notifikasi untuk siswa Siswa 006 ditambahkan ke antrean.
+[25-Jul-2025 06:25:35 Asia/Jakarta] Notifikasi untuk siswa Siswa 007 ditambahkan ke antrean.
+[25-Jul-2025 06:26:46 Asia/Jakarta] Notifikasi untuk guru Guru 006 ditambahkan ke antrean.
+[25-Jul-2025 06:26:46 Asia/Jakarta] Notifikasi untuk guru Guru 006 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 06:28:42 Asia/Jakarta] Notifikasi untuk guru Guru 010 ditambahkan ke antrean.
+[25-Jul-2025 06:28:42 Asia/Jakarta] Notifikasi untuk guru Guru 010 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 06:37:35 Asia/Jakarta] Notifikasi untuk siswa Siswa 003 ditambahkan ke antrean.
+[25-Jul-2025 06:37:47 Asia/Jakarta] Notifikasi untuk guru Guru 007 ditambahkan ke antrean.
+[25-Jul-2025 06:37:47 Asia/Jakarta] Notifikasi untuk guru Guru 007 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 06:44:30 Asia/Jakarta] Notifikasi untuk guru Guru 002 ditambahkan ke antrean.
+[25-Jul-2025 06:44:30 Asia/Jakarta] Notifikasi untuk guru Guru 002 ke Kepala Sekolah ditambahkan ke antrean.
+[25-Jul-2025 15:06:58 Asia/Jakarta] Notifikasi untuk siswa Siswa 004 ditambahkan ke antrean.
+[26-Jul-2025 10:06:39 Asia/Jakarta] Notifikasi untuk guru Guru 010 ditambahkan ke antrean.
+[26-Jul-2025 10:06:39 Asia/Jakarta] Notifikasi untuk guru Guru 010 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:06:47 Asia/Jakarta] Notifikasi untuk siswa Siswa 001 ditambahkan ke antrean.
+[26-Jul-2025 10:09:07 Asia/Jakarta] Notifikasi untuk guru Guru 001 ditambahkan ke antrean.
+[26-Jul-2025 10:09:07 Asia/Jakarta] Notifikasi untuk guru Guru 001 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:27:35 Asia/Jakarta] Notifikasi untuk guru Guru 009 ditambahkan ke antrean.
+[26-Jul-2025 10:27:35 Asia/Jakarta] Notifikasi untuk guru Guru 009 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:27:41 Asia/Jakarta] Notifikasi untuk guru Guru 008 ditambahkan ke antrean.
+[26-Jul-2025 10:27:41 Asia/Jakarta] Notifikasi untuk guru Guru 008 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:27:45 Asia/Jakarta] Notifikasi untuk guru Guru 007 ditambahkan ke antrean.
+[26-Jul-2025 10:27:45 Asia/Jakarta] Notifikasi untuk guru Guru 007 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:27:53 Asia/Jakarta] Notifikasi untuk guru Guru 006 ditambahkan ke antrean.
+[26-Jul-2025 10:27:53 Asia/Jakarta] Notifikasi untuk guru Guru 006 ke Kepala Sekolah ditambahkan ke antrean.
+[26-Jul-2025 10:29:38 Asia/Jakarta] Notifikasi untuk siswa Siswa 009 ditambahkan ke antrean.
+[27-Jul-2025 23:57:35 Asia/Jakarta] Notifikasi untuk siswa Siswa 001 ditambahkan ke antrean.
+[27-Jul-2025 23:57:41 Asia/Jakarta] Notifikasi untuk siswa Siswa 002 ditambahkan ke antrean.
+[27-Jul-2025 23:57:49 Asia/Jakarta] Notifikasi untuk siswa Siswa 003 ditambahkan ke antrean.
+[27-Jul-2025 23:57:56 Asia/Jakarta] Notifikasi untuk siswa Siswa 004 ditambahkan ke antrean.
+[27-Jul-2025 23:58:02 Asia/Jakarta] Notifikasi untuk siswa Siswa 005 ditambahkan ke antrean.
+[27-Jul-2025 23:59:02 Asia/Jakarta] Error adding notification to queue: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[27-Jul-2025 23:59:02 Asia/Jakarta] Gagal menambahkan notifikasi untuk guru Guru 001 ke antrean: Gagal menambahkan notifikasi ke antrean: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[27-Jul-2025 23:59:43 Asia/Jakarta] Notifikasi untuk guru Guru 001 ke Kepala Sekolah ditambahkan ke antrean.
+[27-Jul-2025 23:59:48 Asia/Jakarta] Notifikasi untuk siswa Siswa 006 ditambahkan ke antrean.
+[27-Jul-2025 23:59:51 Asia/Jakarta] Notifikasi untuk siswa Siswa 007 ditambahkan ke antrean.
+[27-Jul-2025 23:59:55 Asia/Jakarta] Notifikasi untuk guru Guru 010 ditambahkan ke antrean.
+[27-Jul-2025 23:59:55 Asia/Jakarta] Notifikasi untuk guru Guru 010 ke Kepala Sekolah ditambahkan ke antrean.
+[27-Jul-2025 23:59:57 Asia/Jakarta] Notifikasi untuk guru Guru 009 ditambahkan ke antrean.
+[27-Jul-2025 23:59:57 Asia/Jakarta] Notifikasi untuk guru Guru 009 ke Kepala Sekolah ditambahkan ke antrean.
+[27-Jul-2025 23:59:59 Asia/Jakarta] Notifikasi untuk guru Guru 008 ditambahkan ke antrean.
+[27-Jul-2025 23:59:59 Asia/Jakarta] Notifikasi untuk guru Guru 008 ke Kepala Sekolah ditambahkan ke antrean.
+[28-Jul-2025 00:01:35 Asia/Jakarta] Notifikasi untuk siswa Siswa 006 ditambahkan ke antrean.
+[28-Jul-2025 00:02:36 Asia/Jakarta] Error adding notification to queue: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[28-Jul-2025 00:02:36 Asia/Jakarta] Gagal menambahkan notifikasi untuk siswa Siswa 007 ke antrean: Gagal menambahkan notifikasi ke antrean: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[24-Aug-2025 03:20:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method DetailPembayaranTransaksi::getAllWithTagihanAndSiswa() in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php:164
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php on line 164
+[24-Aug-2025 04:49:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method DetailPembayaranTransaksi::getAllWithTagihanAndSiswa() in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php:164
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php on line 164
+[24-Aug-2025 04:50:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method DetailPembayaranTransaksi::getAllWithTagihanAndSiswa() in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php:164
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/api/export_pembayaran_pdf.php on line 164
+[27-Aug-2025 06:13:36 UTC] PHP Fatal error:  Uncaught Error: Call to private Database::__construct() from invalid context in /home/u7653190/public_html/pondok.codene.my.id/api/get_students_by_kelas.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/pondok.codene.my.id/api/get_students_by_kelas.php on line 14
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:14:17 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:14:17 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:14:28 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:14:28 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:15:01 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:15:01 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:16:18 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:16:18 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:16:55 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:16:55 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:17:10 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 06:17:10 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:24:20 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:24:20 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:24:26 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:24:26 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:26:33 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:26:33 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:26:38 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:26:38 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:27:28 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:27:28 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:50 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:50 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:51 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:51 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:29:52 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:41:00 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:41:00 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:41:19 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:41:19 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:52:16 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:52:16 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 8
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 13
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:55:54 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/pondok.codene.my.id/classes/Database.php on line 17
+[27-Aug-2025 12:55:54 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[27-Aug-2025 12:57:24 UTC] PHP Warning:  require_once(../path/to/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 12:57:24 UTC] PHP Fatal error:  require_once(): Failed opening required '../path/to/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 12:58:12 UTC] PHP Warning:  require_once(../path/to/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 12:58:12 UTC] PHP Fatal error:  require_once(): Failed opening required '../path/to/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 12:58:18 UTC] PHP Warning:  require_once(../path/to/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 12:58:18 UTC] PHP Fatal error:  require_once(): Failed opening required '../path/to/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 13:02:16 UTC] PHP Warning:  require_once(../path/to/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 13:02:16 UTC] PHP Fatal error:  require_once(): Failed opening required '../path/to/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 13:02:22 UTC] PHP Warning:  require_once(../path/to/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[27-Aug-2025 13:02:22 UTC] PHP Fatal error:  require_once(): Failed opening required '../path/to/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/pondok.codene.my.id/api/get_siswa_by_kelas.php on line 6
+[30-Aug-2025 17:29:07 Asia/Jakarta] Notifikasi untuk guru Ust. Ahmad Syuhada ditambahkan ke antrean.
+[30-Aug-2025 17:29:07 Asia/Jakarta] Nomor telepon Kepala Sekolah sama dengan nomor guru, notifikasi ke Kepala Sekolah diabaikan untuk menghindari duplikasi.
+[30-Aug-2025 22:09:13 Asia/Jakarta] Notifikasi untuk guru Ust. Ali Fajri ditambahkan ke antrean.
+[30-Aug-2025 22:09:13 Asia/Jakarta] Notifikasi untuk guru Ust. Ali Fajri ke Kepala Sekolah ditambahkan ke antrean.
+[11-Sep-2025 14:01:32 Asia/Jakarta] Notifikasi untuk guru Ust. Ahmad Syuhada ditambahkan ke antrean.
+[11-Sep-2025 14:01:32 Asia/Jakarta] Notifikasi untuk guru Ust. Ahmad Syuhada ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:39:07 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[14-Sep-2025 10:39:07 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:41:46 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[14-Sep-2025 10:41:46 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:42:57 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ditambahkan ke antrean.
+[14-Sep-2025 10:42:57 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:43:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[14-Sep-2025 10:43:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:49:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[14-Sep-2025 10:49:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:49:30 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[14-Sep-2025 10:49:30 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:49:36 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ditambahkan ke antrean.
+[14-Sep-2025 10:49:36 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ke Kepala Sekolah ditambahkan ke antrean.
+[14-Sep-2025 10:49:39 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[14-Sep-2025 10:49:39 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[16-Sep-2025 10:39:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[16-Sep-2025 10:39:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[18-Sep-2025 09:39:21 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[18-Sep-2025 09:39:21 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[18-Sep-2025 09:45:53 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[18-Sep-2025 09:45:53 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:28:27 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:28:27 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 06:30:51 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/api/../Classes/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/api/get_siswa_by_jadwal.php on line 8
+[19-Sep-2025 06:30:51 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/api/../Classes/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/api/get_siswa_by_jadwal.php on line 8
+[19-Sep-2025 06:32:36 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/api/../Classes/Siswa.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/api/get_siswa_by_jadwal.php on line 8
+[19-Sep-2025 06:32:36 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/api/../Classes/Siswa.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/api/get_siswa_by_jadwal.php on line 8
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:34:38 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:34:38 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:36:02 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:36:02 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:37:24 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:37:24 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:40:50 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:40:50 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_CHARSET - assumed 'DB_CHARSET' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 8
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_COLLATE - assumed 'DB_COLLATE' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 13
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:43:38 UTC] PHP Warning:  Use of undefined constant DB_PASS - assumed 'DB_PASS' (this will throw an Error in a future version of PHP) in /home/u7653190/public_html/absensi.codene.my.id/classes/Database.php on line 17
+[19-Sep-2025 06:43:38 UTC] Koneksi database gagal: SQLSTATE[HY000] [2019] Unknown character set
+[19-Sep-2025 23:08:52 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[19-Sep-2025 23:08:52 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:40:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 06:40:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:44:34 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 06:44:34 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:44:43 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[20-Sep-2025 06:44:43 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:44:52 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 06:44:52 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:47:10 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[20-Sep-2025 06:47:10 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:49:45 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[20-Sep-2025 06:49:45 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 06:56:59 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ditambahkan ke antrean.
+[20-Sep-2025 06:56:59 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 08:06:30 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 08:06:30 Asia/Jakarta] Nomor telepon Kepala Sekolah tidak ditemukan di pengaturan untuk notifikasi WhatsApp guru.
+[20-Sep-2025 08:25:51 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 08:25:51 Asia/Jakarta] Nomor telepon Kepala Sekolah tidak ditemukan di pengaturan untuk notifikasi WhatsApp guru.
+[20-Sep-2025 08:36:25 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 08:36:25 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 09:22:46 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[20-Sep-2025 09:22:46 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 09:44:59 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[20-Sep-2025 09:44:59 Asia/Jakarta] Nomor telepon Kepala Sekolah tidak ditemukan di pengaturan untuk notifikasi WhatsApp guru.
+[20-Sep-2025 09:52:33 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[20-Sep-2025 09:52:33 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 09:52:42 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[20-Sep-2025 09:52:42 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 09:56:44 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[20-Sep-2025 09:56:44 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 10:20:31 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 10:20:31 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 11:10:33 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 11:10:33 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 11:22:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 11:22:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 11:28:28 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[20-Sep-2025 11:28:28 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 11:32:02 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 11:32:02 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:07:27 Asia/Jakarta] Error in guru_check_out.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_keluar' in 'SET'
+[20-Sep-2025 12:11:16 Asia/Jakarta] Error in guru_check_out.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_keluar' in 'SET'
+[20-Sep-2025 12:12:01 Asia/Jakarta] Error in guru_check_out.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_keluar' in 'SET'
+[20-Sep-2025 12:13:06 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng (pulang) ditambahkan ke antrean.
+[20-Sep-2025 12:13:06 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah (pulang) ditambahkan ke antrean.
+[20-Sep-2025 12:19:06 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ditambahkan ke antrean.
+[20-Sep-2025 12:19:06 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:20:26 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:20:37 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:21:13 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng (pulang) ditambahkan ke antrean.
+[20-Sep-2025 12:21:13 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah (pulang) ditambahkan ke antrean.
+[20-Sep-2025 12:25:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:25:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:26:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:26:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:33:46 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:33:46 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:33:55 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:33:55 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:35:09 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[20-Sep-2025 12:35:09 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:40:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:40:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:40:35 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 12:40:35 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:42:02 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[20-Sep-2025 12:42:02 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 12:42:24 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[20-Sep-2025 12:42:24 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 13:37:49 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 13:37:49 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 13:38:02 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 13:38:02 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 13:59:56 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 13:59:56 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:00:26 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:00:37 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:04:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:04:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:04:51 Asia/Jakarta] Error in guru_check_out.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '// Kolom ini diperbarui dua kali
+          status_pulang = ?, // Parameter i...' at line 3
+[20-Sep-2025 14:06:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:06:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:09:30 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:09:30 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:10:26 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:10:36 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:12:10 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:12:10 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:14:32 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:14:32 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:14:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:14:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:17:53 Asia/Jakarta] PHP Notice:  Undefined variable: jam_masuk_default in /home/u7653190/public_html/absensi.codene.my.id/classes/Absensi.php on line 47
+[20-Sep-2025 14:17:53 Asia/Jakarta] PHP Notice:  Undefined variable: toleransi_menit in /home/u7653190/public_html/absensi.codene.my.id/classes/Absensi.php on line 48
+[20-Sep-2025 14:17:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:17:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:20:05 Asia/Jakarta] PHP Notice:  Undefined variable: jam_masuk_default in /home/u7653190/public_html/absensi.codene.my.id/classes/Absensi.php on line 47
+[20-Sep-2025 14:20:05 Asia/Jakarta] PHP Notice:  Undefined variable: toleransi_menit in /home/u7653190/public_html/absensi.codene.my.id/classes/Absensi.php on line 48
+[20-Sep-2025 14:20:05 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:20:05 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:26:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:26:41 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:27:00 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:27:00 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:28:29 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:28:29 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:28:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:28:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:34:15 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:34:15 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:34:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:34:24 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:35:51 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:35:51 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 14:36:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[20-Sep-2025 14:36:25 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[20-Sep-2025 22:31:09 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[20-Sep-2025 22:31:09 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:22:12 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 06:22:12 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:41:35 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 06:41:35 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:46:58 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[21-Sep-2025 06:46:58 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:47:26 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[21-Sep-2025 06:47:26 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:47:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 06:47:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:52:16 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[21-Sep-2025 06:52:16 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:52:32 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ditambahkan ke antrean.
+[21-Sep-2025 06:52:32 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 06:55:00 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 06:55:00 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:10:38 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 10:10:38 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:13:24 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[21-Sep-2025 10:13:24 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:15:23 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:15:23 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:30:02 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 10:30:02 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:36:28 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ditambahkan ke antrean.
+[21-Sep-2025 10:36:28 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:41:28 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[21-Sep-2025 10:41:28 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:41:43 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[21-Sep-2025 10:41:43 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:44:55 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:44:55 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:45:36 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:45:56 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:47:02 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:47:02 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:47:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:47:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:48:52 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:48:52 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:49:42 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:49:42 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:51:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:51:43 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 10:51:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[21-Sep-2025 10:51:53 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[21-Sep-2025 11:10:27 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[21-Sep-2025 11:10:27 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:22:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[22-Sep-2025 06:22:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:32:42 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[22-Sep-2025 06:32:42 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:46:26 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 06:46:26 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:47:34 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 06:47:34 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:47:50 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 06:47:50 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:49:10 Asia/Jakarta] Error adding notification to queue: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[22-Sep-2025 06:49:10 Asia/Jakarta] Gagal menambahkan notifikasi untuk guru Agus Sukarna, S.Pd.I ke antrean: Gagal menambahkan notifikasi ke antrean: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[22-Sep-2025 06:49:24 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:50:28 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 06:50:28 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 06:55:58 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ditambahkan ke antrean.
+[22-Sep-2025 06:55:58 Asia/Jakarta] Notifikasi untuk guru H. Irfan Aziz, S.S,M.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 07:37:54 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 07:37:54 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 08:08:38 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[22-Sep-2025 08:08:38 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 08:31:16 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[22-Sep-2025 08:31:16 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 09:51:26 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[22-Sep-2025 09:51:26 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 09:54:05 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[22-Sep-2025 09:54:05 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 09:54:32 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[22-Sep-2025 09:54:32 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:04:28 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 10:04:28 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:04:58 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[22-Sep-2025 10:04:58 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:05:51 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[22-Sep-2025 10:05:51 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:27:52 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 10:27:52 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:40:05 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[22-Sep-2025 10:40:06 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:44:50 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 10:44:50 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 10:54:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[22-Sep-2025 10:54:03 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:20:18 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[22-Sep-2025 11:20:18 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:22:17 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[22-Sep-2025 11:22:17 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:25:17 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 11:25:17 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:26:25 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[22-Sep-2025 11:26:25 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:27:25 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[22-Sep-2025 11:27:25 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 11:36:52 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[22-Sep-2025 11:36:52 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 12:10:54 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[22-Sep-2025 12:10:54 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 12:22:06 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 12:22:06 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 12:40:46 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 12:40:46 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 12:43:20 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 12:43:20 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 12:43:47 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 12:43:47 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[22-Sep-2025 13:13:02 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[22-Sep-2025 13:13:02 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:30:05 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[23-Sep-2025 06:30:05 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:32:59 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[23-Sep-2025 06:32:59 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:37:45 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 06:37:45 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:47:52 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 06:47:52 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:48:59 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[23-Sep-2025 06:48:59 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:50:54 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ditambahkan ke antrean.
+[23-Sep-2025 06:50:54 Asia/Jakarta] Notifikasi untuk guru Agus Sukarna, S.Pd.I ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 06:54:59 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[23-Sep-2025 06:54:59 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 07:03:33 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[23-Sep-2025 07:03:33 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 07:41:06 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 07:41:06 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 07:58:45 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[23-Sep-2025 07:58:45 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 08:20:27 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 08:20:27 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 09:37:36 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[23-Sep-2025 09:37:36 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 09:40:23 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[23-Sep-2025 09:40:23 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 09:53:42 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[23-Sep-2025 09:53:42 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 10:00:50 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 10:00:50 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 10:01:33 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[23-Sep-2025 10:01:33 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 10:39:31 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 10:39:31 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 11:22:53 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 11:22:53 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 11:26:13 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 11:26:13 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 11:32:31 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 11:32:31 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 11:34:49 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[23-Sep-2025 11:34:49 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 12:04:20 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[23-Sep-2025 12:04:20 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 12:37:38 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 12:37:38 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 12:45:30 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[23-Sep-2025 12:45:30 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 12:46:51 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 12:46:51 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 12:47:24 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 12:47:24 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[23-Sep-2025 13:15:05 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[23-Sep-2025 13:15:16 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:36:51 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ditambahkan ke antrean.
+[24-Sep-2025 06:36:51 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:37:33 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[24-Sep-2025 06:37:33 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:42:57 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 06:42:57 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:44:07 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[24-Sep-2025 06:44:07 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:48:19 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 06:48:19 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 06:54:11 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 06:54:11 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 07:00:38 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 07:00:38 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 07:01:48 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[24-Sep-2025 07:01:48 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 07:05:31 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 07:05:31 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 07:53:47 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[24-Sep-2025 07:53:47 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 09:10:19 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 09:10:19 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 09:36:59 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[24-Sep-2025 09:36:59 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 09:37:31 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[24-Sep-2025 09:37:31 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 09:50:20 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[24-Sep-2025 09:50:20 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 09:58:49 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[24-Sep-2025 09:58:49 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 10:01:38 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 10:01:38 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 10:56:04 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[24-Sep-2025 10:56:04 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:10:15 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 11:10:15 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:20:13 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 11:20:13 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:24:14 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[24-Sep-2025 11:24:14 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:26:21 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 11:26:21 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:28:34 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[24-Sep-2025 11:28:34 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 11:32:18 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[24-Sep-2025 11:32:18 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:39:57 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[24-Sep-2025 12:39:57 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:40:40 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[24-Sep-2025 12:40:40 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:43:31 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 12:43:31 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:45:01 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 12:45:01 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:45:26 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 12:45:26 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[24-Sep-2025 12:46:07 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[24-Sep-2025 12:46:07 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:30:43 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ditambahkan ke antrean.
+[25-Sep-2025 06:30:43 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:31:33 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[25-Sep-2025 06:31:33 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:40:12 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[25-Sep-2025 06:40:12 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:43:05 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[25-Sep-2025 06:43:05 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:43:38 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 06:43:38 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:45:28 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 06:45:28 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:45:54 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 06:45:54 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 06:47:44 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ditambahkan ke antrean.
+[25-Sep-2025 06:47:44 Asia/Jakarta] Notifikasi untuk guru H. Nur Moh. Faiz Amin, Lc., M.E. ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 07:33:31 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 07:33:31 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 09:07:55 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[25-Sep-2025 09:07:55 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 09:46:22 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 09:46:22 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 09:46:37 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 09:46:37 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 09:49:39 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[25-Sep-2025 09:49:39 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 10:17:13 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[25-Sep-2025 10:17:13 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 10:41:00 Asia/Jakarta] Notifikasi untuk guru Adit Firmansyah, S.Ag ditambahkan ke antrean.
+[25-Sep-2025 10:41:00 Asia/Jakarta] Notifikasi untuk guru Adit Firmansyah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 11:05:53 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 11:05:53 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[25-Sep-2025 11:08:25 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[25-Sep-2025 11:08:25 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 06:44:03 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[27-Sep-2025 06:44:03 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 06:53:05 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 06:53:05 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 06:53:30 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[27-Sep-2025 06:53:30 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 06:55:02 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 06:55:02 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 07:02:33 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 07:02:33 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 07:21:20 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 07:21:20 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 08:07:51 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 08:07:51 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 08:49:58 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[27-Sep-2025 08:49:58 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 09:05:49 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 09:05:49 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 09:21:47 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 09:21:47 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 09:42:08 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[27-Sep-2025 09:42:08 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:05:23 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[27-Sep-2025 10:05:23 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:05:37 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 10:05:37 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:05:59 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[27-Sep-2025 10:05:59 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:25:01 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 10:25:01 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:27:01 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 10:27:01 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 10:34:39 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 10:34:39 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 11:16:43 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[27-Sep-2025 11:16:43 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 11:21:58 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[27-Sep-2025 11:21:58 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 11:22:54 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[27-Sep-2025 11:22:54 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 11:23:26 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[27-Sep-2025 11:23:26 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 11:24:47 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 11:24:47 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 12:32:00 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[27-Sep-2025 12:32:00 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 12:32:34 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[27-Sep-2025 12:32:34 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 12:39:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 12:39:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[27-Sep-2025 12:47:09 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[27-Sep-2025 12:47:09 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:42:03 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ditambahkan ke antrean.
+[28-Sep-2025 06:42:03 Asia/Jakarta] Notifikasi untuk guru Agus Saputra, M.M ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:44:54 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[28-Sep-2025 06:44:54 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:47:06 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[28-Sep-2025 06:47:06 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:48:33 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 06:48:33 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:49:29 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[28-Sep-2025 06:49:29 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 06:54:08 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 06:54:08 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 08:29:43 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 08:29:43 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 09:07:53 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[28-Sep-2025 09:07:53 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 09:35:17 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 09:35:17 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 09:53:17 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 09:53:17 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 09:53:47 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[28-Sep-2025 09:53:47 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 09:56:52 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ditambahkan ke antrean.
+[28-Sep-2025 09:56:52 Asia/Jakarta] Notifikasi untuk guru Eka Purnama Fatmawati S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 10:50:06 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ditambahkan ke antrean.
+[28-Sep-2025 10:50:06 Asia/Jakarta] Notifikasi untuk guru Khoirul Iman, S.E ke Kepala Sekolah ditambahkan ke antrean.
+[28-Sep-2025 11:34:56 Asia/Jakarta] Notifikasi untuk guru Adit Firmansyah, S.Ag ditambahkan ke antrean.
+[28-Sep-2025 11:34:56 Asia/Jakarta] Notifikasi untuk guru Adit Firmansyah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 06:47:51 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 06:47:51 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 06:50:13 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 06:50:13 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 06:50:53 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[29-Sep-2025 06:50:53 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 06:53:46 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 06:53:46 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 07:00:50 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 07:00:50 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 07:29:10 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 07:29:10 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 07:57:46 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[29-Sep-2025 07:57:46 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 09:09:31 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[29-Sep-2025 09:09:31 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 09:54:25 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[29-Sep-2025 09:54:25 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 09:57:26 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[29-Sep-2025 09:57:26 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 10:00:13 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[29-Sep-2025 10:00:13 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 10:04:00 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 10:04:00 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:01:41 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 11:01:41 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:15:33 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[29-Sep-2025 11:15:33 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:22:34 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 11:22:34 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:22:58 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[29-Sep-2025 11:22:58 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:23:46 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[29-Sep-2025 11:23:46 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:23:46 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[29-Sep-2025 11:23:46 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:28:34 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 11:28:34 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 11:47:25 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[29-Sep-2025 11:47:25 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 12:49:17 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 12:49:17 Asia/Jakarta] Notifikasi untuk guru Shovy Aurel Laelia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 13:08:56 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 13:08:56 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 13:51:40 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 13:51:40 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[29-Sep-2025 13:52:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[29-Sep-2025 13:52:31 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 06:33:26 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 06:33:26 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 06:42:21 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[30-Sep-2025 06:42:21 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 06:52:33 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 06:52:33 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 07:06:41 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ditambahkan ke antrean.
+[30-Sep-2025 07:06:41 Asia/Jakarta] Notifikasi untuk guru Nunung Nursaadah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 07:07:39 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[30-Sep-2025 07:07:39 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 07:13:32 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 07:13:32 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 07:40:47 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 07:40:47 Asia/Jakarta] Notifikasi untuk guru Indriyani, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 08:19:33 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 08:19:33 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 08:24:02 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[30-Sep-2025 08:24:02 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 08:27:54 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[30-Sep-2025 08:27:54 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 09:34:12 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[30-Sep-2025 09:34:12 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 09:51:50 Asia/Jakarta] Notifikasi untuk guru Maftuhah ditambahkan ke antrean.
+[30-Sep-2025 09:51:50 Asia/Jakarta] Notifikasi untuk guru Maftuhah ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 09:53:06 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[30-Sep-2025 09:53:06 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 10:00:36 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 10:00:36 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 10:00:42 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[30-Sep-2025 10:00:42 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 10:51:54 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 10:51:54 Asia/Jakarta] Notifikasi untuk guru Ega Elvia, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:09:36 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 11:09:36 Asia/Jakarta] Notifikasi untuk guru Sri Waryi Marjuna, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:21:50 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ditambahkan ke antrean.
+[30-Sep-2025 11:21:50 Asia/Jakarta] Notifikasi untuk guru M.Faiz Mutashim Billah ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:24:44 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 11:24:44 Asia/Jakarta] Notifikasi untuk guru Fajrun Nayar, A.H, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:25:25 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ditambahkan ke antrean.
+[30-Sep-2025 11:25:25 Asia/Jakarta] Notifikasi untuk guru Ade Fathurohman Firdaus, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:26:40 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ditambahkan ke antrean.
+[30-Sep-2025 11:26:40 Asia/Jakarta] Notifikasi untuk guru Suhayya Bah, S.Ag ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:26:51 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ditambahkan ke antrean.
+[30-Sep-2025 11:26:51 Asia/Jakarta] Notifikasi untuk guru Zakiyah Mustajabah, M.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 11:51:10 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 11:51:10 Asia/Jakarta] Notifikasi untuk guru Renita, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 12:34:27 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ditambahkan ke antrean.
+[30-Sep-2025 12:34:27 Asia/Jakarta] Notifikasi untuk guru Ginanjar Wilujeng ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 12:35:30 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ditambahkan ke antrean.
+[30-Sep-2025 12:35:30 Asia/Jakarta] Notifikasi untuk guru Ahmad Faqih Musadad, Lc.,MA ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 12:50:23 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ditambahkan ke antrean.
+[30-Sep-2025 12:50:23 Asia/Jakarta] Notifikasi untuk guru Royan Camelia, S.S ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 13:09:10 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 13:09:10 Asia/Jakarta] Notifikasi untuk guru Eva Azizah, S.Pd ke Kepala Sekolah ditambahkan ke antrean.
+[30-Sep-2025 14:28:34 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ditambahkan ke antrean.
+[30-Sep-2025 14:28:34 Asia/Jakarta] Notifikasi untuk guru Arifin Nasa, S.Pd ke Kepala Sekolah ditambahkan ke antrean.

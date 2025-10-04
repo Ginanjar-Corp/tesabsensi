@@ -1,0 +1,44 @@
+
+Versi 1.1.6 - 22-09-2025
+- Perubahan kolom data guru
+- Penambahan menu kirim rekap mingguan absensi kehadiran
+- Penambahan menu kirim rekap mingguan absensi mata pelajaran
+
+Versi 1.1.5 - 20-09-2025
+- Perubahan pengaturan sekolah
+- Penambahan sistem absensi dengan single qr code
+- Penambahan location absensi single qr code
+- Penambahan jabatan, tunjangan jabatan, kegiatan lainnya dan tunjangan kegiatan lainnya
+- Penambahan menu baru di akun guru untuk melihat rekapan gaji komprehensif
+
+Versi 1.1.4 - 10-09-2025
+- Perbaikan manajemen pengguna
+- Perubahan pada pembuatan jadwal bisa berdasarkan kelas atau per siswa
+- Penambahan Fitur catatan akademik
+- Penambahan fitur absen per mapel dari admin
+- Penambahan fitur keuangan (Opsional)
+
+Versi 1.1.3 - 27-07-2025
+- Perbaikan bug nominal per pertemuan
+- Penambahan API Mesin RFID
+
+Versi 1.1.2 - 2024-07-24
+- Menambahkan fitur rekap bisyaroh guru.
+- Menambahkan pengaturan bisyarroh guru per jam pelajaran
+- Menambahkan pengaturan bisyaroh guru per pertemuan
+- Menambahkan fitur upload data siswa
+- Menambah fitur upload data guru
+
+Versi 1.1.1 - 2024-07-19
+- Fitur absen qr code/rfid
+- Fitur laporan absen harian.
+- Fitur laporan absen mapel.
+
+Versi 1.1.0 - 2024-07-18
+- Fitur dasar manajemen tahun ajaran.
+- Fitur dasar manajemen kelas.
+- Fitur dasar manajemen tahun ajaran.
+
+Versi 1.0.0 - 2024-07-17
+- Rilis awal aplikasi.
+- Fitur dasar manajemen siswa dan guru.
