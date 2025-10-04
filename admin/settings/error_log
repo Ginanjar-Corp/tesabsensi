@@ -1,0 +1,71 @@
+[27-Jul-2025 14:01:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::updateSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 39
+[27-Jul-2025 14:02:07 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to GajiSettings::updateGajiSettings() must be of the type array, float given, called in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 39 and defined in /home/u7653190/public_html/absensi.codene.my.id/classes/GajiSettings.php:30
+Stack trace:
+#0 /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php(39): GajiSettings->updateGajiSettings(10000)
+#1 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/classes/GajiSettings.php on line 30
+[27-Jul-2025 14:03:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::getGajiSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 28
+[27-Jul-2025 14:03:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined method GajiSettings::getGajiSettings() in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 28
+[27-Jul-2025 14:45:17 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:17 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:45 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header_admin.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:45:45 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/header_admin.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 62
+[27-Jul-2025 14:46:22 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/footer.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 104
+[27-Jul-2025 14:46:22 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/footer.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/gaji_settings.php on line 104
+[20-Sep-2025 06:05:37 Asia/Jakarta] Error loading school settings from DB: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[20-Sep-2025 06:05:37 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[20-Sep-2025 06:05:37 Asia/Jakarta] Database connection error in header: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[19-Sep-2025 23:05:42 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:05:42 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[20-Sep-2025 06:06:53 Asia/Jakarta] Error loading school settings from DB: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[20-Sep-2025 06:06:53 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[20-Sep-2025 06:06:53 Asia/Jakarta] Database connection error in header: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lokasi_sekolah_lat' in 'SELECT'
+[19-Sep-2025 23:07:32 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:07:32 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:08:20 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:08:20 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:10:21 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:10:21 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:13:33 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:13:33 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:17:27 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[19-Sep-2025 23:17:27 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[20-Sep-2025 07:37:32 Asia/Jakarta] Error loading school settings from DB: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'qr_token_hash' in 'SELECT'
+[20-Sep-2025 07:37:32 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'qr_token_hash' in 'SELECT'
+[20-Sep-2025 07:37:32 Asia/Jakarta] Database connection error in header: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'qr_token_hash' in 'SELECT'
+[20-Sep-2025 00:40:34 UTC] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[20-Sep-2025 00:40:34 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../config/app_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 6
+[20-Sep-2025 07:43:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Endroid\QrCode\Builder\Builder' not found in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 37
+[20-Sep-2025 07:47:55 Asia/Jakarta] PHP Warning:  require_once(/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/phpqrcode/qrlib.php): failed to open stream: No such file or directory in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 14
+[20-Sep-2025 07:47:55 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/u7653190/public_html/absensi.codene.my.id/admin/settings/../../includes/phpqrcode/qrlib.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 14
+[20-Sep-2025 08:26:55 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 08:53:43 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 08:54:17 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 09:03:06 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 09:25:19 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 09:25:38 Asia/Jakarta] Pengaturan Sekolah Error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': qr_token_hash,
+                        updated_at = CURRENT_TIMESTAMP
+   ...' at line 25
+[20-Sep-2025 05:54:52 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/u7653190/public_html/absensi.codene.my.id/admin/settings/qr_code_generator.php on line 19

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Scanner - Kamera Depan</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <h1>QR Scanner (Kamera Depan)</h1>
+    <div id="reader" style="width:300px; height:300px;"></div>
+    <div id="result"></div>
+
+    <script>
+        const html5QrCode = new Html5Qrcode("reader");
+        const resultDiv = document.getElementById('result');
+
+        html5QrCode.start(
+            { facingMode: "user" },   // Pakai kamera depan
+            { fps: 10, qrbox: 250 },
+            decodedText => {
+                resultDiv.innerText = "QR Code: " + decodedText;
+                html5QrCode.stop();
+            },
+            errorMessage => {
+                console.warn("Scan error:", errorMessage);
+            }
+        ).catch(err => {
+            console.error("Tidak bisa memulai kamera:", err);
+            resultDiv.innerText = "Gagal mengakses kamera depan.";
+        });
+    </script>
+</body>
+</html>
