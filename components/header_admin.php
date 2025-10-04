@@ -308,7 +308,7 @@ if (!empty($school_logo_path)) {
                                     <i class="fas fa-shipping-fast"></i> Bisyaroh PTM</a></li>
                                 <li><a href="<?php echo ROOT_URL; ?>admin/rekap_gaji_bulanan_guru.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'rekap_gaji_bulanan_guru.php') ? 'active' : ''; ?>">
                                     <i class="fas fa-money-bill-wave"></i> Bisyaroh Bulanan</a></li>
-                                <li><a href="<?php echo ROOT_URL; ?>admin/rekap_gaji_komprehensif_guru.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'rekap_gaji_komprehensif_guru.php') ? 'active' : ''; ?>">
+                                <li><a href="<?php echo ROOT_URL; ?>admin/rekap_gaji_guru.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'rekap_gaji_komprehensif_guru.php') ? 'active' : ''; ?>">
                                     <i class="fas fa-file-invoice-dollar"></i> Rekap Bisyaroh</a></li>
                             </ul>
                         </li>
@@ -394,3 +394,4 @@ if (!empty($school_logo_path)) {
         });
     });
 </script>
+
